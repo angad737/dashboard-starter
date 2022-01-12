@@ -11,6 +11,7 @@ import {
 } from "@ant-design/icons";
 import { useState } from "react";
 import Logo from "../components/ui/logo";
+import Title from "antd/lib/typography/Title";
 
 const { Header, Content, Footer, Sider } = Layout;
 const { SubMenu } = Menu;
@@ -47,7 +48,17 @@ function MyApp({ Component, pageProps }) {
         </Menu>
       </Sider>
       <Layout className="site-layout">
-        <Header className="site-layout-background" style={{ padding: 0 }} />
+        <Header
+          className="site-layout-background"
+          style={{ zIndex: 1, width: "100%" }}
+        >
+          <Title
+            level={3}
+            style={{ color: "#fafafa", margin: "8px", padding: "8px" }}
+          >
+            Current Page Title
+          </Title>
+        </Header>
         <Content style={{ margin: "0 16px" }}>
           <Breadcrumb style={{ margin: "16px 0" }}>
             <Breadcrumb.Item>User</Breadcrumb.Item>
